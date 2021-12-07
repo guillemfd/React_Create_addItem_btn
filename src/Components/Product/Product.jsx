@@ -1,4 +1,4 @@
-import "./Product.css";
+import "../Product/Product.css";
 import React from 'react';
 
 const Product = (props)=>{

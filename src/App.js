@@ -2,7 +2,8 @@ import './App.css';
 import {useState} from 'react'
 
 //Components
-import Product from './Product.jsx'
+import Product from './Components/Product/Product.jsx'
+import Form from './Components/Form/Form.jsx'
 
 
 
@@ -55,9 +56,10 @@ function App() {
   return (
     <div className="App">
       <h1>Adding items</h1>
+      <Form userFromApp={user} setUserFromApp={setUser} />
       <div className="cards">
         {user.products.map((product, index)=>{
-        return <Product key={index + Date.now()} productData={product} funcionBorrar={deleteProductAndUpdate} usuario={user.username}/>
+        return <Product key={index + Date.now()} productData={product} funcionBorrar={deleteProductAndUpdate} usuario={user.username} />
         })}
       </div>
 
